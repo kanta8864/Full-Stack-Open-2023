@@ -3,9 +3,8 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate server
-    Note right of server: Server gives a 201 Created message
     server-->>browser: HTML document of exampleapp/spa
     deactivate server
 
